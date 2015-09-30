@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="hr_contract_view_form_view_inherit" model="ir.ui.view">
+            <field name="name">view.hr.contract.form.view.inherit</field>
+            <field name="model">hr.contract</field>
+            <field name="inherit_id" ref="hr_contract.hr_contract_view_form"/>
+            <field name="arch" type="xml">
+                <field name="wage" position="after">
+                    <field name="month_salary" readonly="1" />
+                </field>
+                <div class="oe_title" position="before">
+                    <div class="oe_right oe_button_box">
+                        <button name="get_month_salary" string="Compute Salary" type="object" class="oe_highlight" />
+                    </div>
+                </div>
+            </field>
+        </record>
+
+    </data>
+</openerp>
